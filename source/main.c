@@ -46,7 +46,7 @@ int main(void) {
 	if(fuelLevel <= 4) {
 		outC = outC | 0x40;
 	}
-	if(carDetails == 0x60) {
+	if(carDetails == 0x30) {
 		outC = outC | 0x80;
 	}
 	PORTC = outC;
