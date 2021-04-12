@@ -27,7 +27,7 @@ int main(void) {
 	tempD = PIND;
 	tempB = PINB;
 	totalInput = tempD;
-	tempD = tempD << 1;
+	totalInput = totalInput << 1;
 
 	if(tempB == 0x01) {
 		++totalInput;
