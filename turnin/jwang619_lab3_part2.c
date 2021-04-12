@@ -19,11 +19,9 @@ int main(void) {
     /* Insert your solution below */
 	unsigned char fuelLevel = 0x00;
 	unsigned char outC = 0x00;
-	unsigned char carDetails = 0x00;
     while (1) {
 	outC = 0x00;
 	fuelLevel = PINA & 0x0F;
-	carDetails = PINA & 0x70;
 	if(fuelLevel == 1 || fuelLevel == 2) {
 		outC = 0x20;
 	}
@@ -45,9 +43,6 @@ int main(void) {
 	
 	if(fuelLevel <= 4) {
 		outC = outC | 0x40;
-	}
-	if(carDetails == 0x60) {
-		outC = outC | 0x80;
 	}
 	PORTC = outC;
 	
