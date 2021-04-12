@@ -26,8 +26,8 @@ int main(void) {
 	outB = 0x00;
 	tempD = PIND;
 	tempB = PINB;
-	tempD = tempD << 1;
 	totalInput = tempD;
+	tempD = tempD << 1;
 
 	if(tempB == 0x01) {
 		++totalInput;
